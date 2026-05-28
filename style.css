@@ -23,6 +23,20 @@ html, body {
     /* border colors  */
     --border-primary-color: #333;
 
+    /* Heights  */
+    --ht-sm : 16px;
+    --ht-md : 24px;
+    --ht-lg : 36px;
+    --ht-xl : 50px;
+    --ht-2xl : 68px;
+
+    /* Widths  */
+    --wt-sm : 16px;
+    --wt-md : 24px;
+    --wt-lg : 36px;
+    --wt-xl : 50px;
+    --wt-2xl : 68px;
+
 
     /* Border Radius  */
     --border-radius-xs: 4px;
@@ -147,4 +161,57 @@ section .infos{
 
 .modal .game-over{
     display: none;
+}
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    user-select: none;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+}
+
+.bottom{
+    display: flex;
+    gap: var(--space-md);
+}
+
+.box{
+    height: var(--ht-2xl);
+    width: var(--ht-2xl);
+    background-color: #555151;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover{
+    background-color: #6a6666;
+    transform: translateY(-2px);
+}
+
+.box:active{
+    transform: scale(.95);
+}
+
+
+
+.arrow{
+    font-size: 20px;
+}
+
+.controls-note{
+    font-size: 18px;
+    color: #bdbdbd;
+    text-align: center;
+    margin-top: var(--space-sm);
+    letter-spacing: 0.5px;
 }
